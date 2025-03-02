@@ -1,17 +1,18 @@
+<input class="input_pokemon" placeholder="Florges" type="text" (input)="getPokemon($any($event.target).value)">
+
 <div class="container-card">
     <div class="card-title">
-        <h1>{{PokemonName}}</h1>
+        <h1>{{pokemon?.name}}</h1>
     </div>
     <div class="card-img">
-        <img src={{img_pokemon}}
+        <img [src]="pokemon?.sprites?.front_default"
         alt="pokemon img"
-        width="330px"
         >
     </div>
     <div class="card-stats">
         <span
-         *ngFor="let type of attributesTypes">
-            <p class="card-type">{{type}}</p>
+         *ngFor="let type of pokemon?.types">
+            <p class="card-type">{{type.type.name}}</p>
         </span>
     </div>
 </div>
