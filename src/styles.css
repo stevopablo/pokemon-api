@@ -10,10 +10,18 @@ input[type="text"]{
     background-color: rgba(179, 190, 187, 0.575);
     padding: 10px 5px 10px ;
     margin: 5px;
+    width: 40%;
+    border-radius: 15px;
     border: 2px solid #f8f8f8;
     font-size: 20px;
     transition: border-color 0.3s ease-in-out;
+    outline: none;
 }
 input[type="text"]:focus{
     border-color: #df090998;
+}
+
+.input-container{
+    display: flex;
+    justify-content: center;
 }
